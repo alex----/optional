@@ -51,7 +51,7 @@ A couple of implementation details made this harder - 'python3 challenges.py' ru
     >>> optional_value
     10
 
-## Fedup of:
+### Fedup of:
 
     >>> def foo(optional_list=None):
     ...     optional_list = optional_list if optional_list is not None else []
@@ -60,7 +60,7 @@ A couple of implementation details made this harder - 'python3 challenges.py' ru
     >>> foo()
     []
 
-## Instead try:
+### Instead try:
 
     >>> def foo(optional_list=None):
     ...     optional_list = optional(optional_list, default=[])
@@ -71,3 +71,14 @@ A couple of implementation details made this harder - 'python3 challenges.py' ru
     >>> foo([1,2,3])
     [1, 2, 3]
 
+### Your own Classes will work too
+    >>> class CustomClass(object):
+    ...     def __init__(self, random, signature, of_custom_class):
+    ...         pass
+    ...     var = 'class data'
+    ... 
+    >>> optional_value = optional(CustomClass(1,2,3))
+    >>> optional_value
+    <optional.optional(<__main__.CustomClass object at 0x102107668>) object at 0x1021076a0>
+    >>> optional_value.var
+    'class data'
