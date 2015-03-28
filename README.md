@@ -2,6 +2,9 @@
 A mostly transparent python3 optional class
 
 This was an exercise to learn a little more of python3. I have not tested/used this in a project.
+Run the tests with 'python3 test_optional.py'. 
+A couple of things made this harder - 'python3 challenges.py' runs a few tests that hight lights some of them
+
 ### See if a value is set, if not set one
     >>> from optional import optional
     >>> optional_value = optional()

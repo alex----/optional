@@ -65,7 +65,7 @@ class Challenges(unittest.TestCase):
         foo_instance = foo()
         foo_instance.random_attr = 0
         self.assertEqual(foo_instance.random_attr, 0)
-        bar_instance = str()
+        bar_instance = list()
         self.assertRaises(AttributeError, setattr, bar_instance, 'random_attr', 0)
 
 if __name__ == '__main__':
