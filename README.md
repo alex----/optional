@@ -63,10 +63,11 @@ A couple of implementation details made this harder - 'python3 challenges.py' ru
 ## Instead try:
 
     >>> def foo(optional_list=None):
-    ...     optional_list = optional(optional_list, [])
+    ...     optional_list = optional(optional_list, default=[])
     ...     print(optional_list)
     ... 
     >>> foo()
     []
-
+    >>> foo([1,2,3])
+    [1, 2, 3]
 
