@@ -5,9 +5,11 @@ This was a learning exercise. I have not tested/used this in a project.
 
 Run the tests with 'python3 test_optional.py'.
 
-Install by cloning the repo and running "sudo python3 setup.py install"
-
 A couple of implementation details made this harder - 'python3 challenges.py' runs a few tests that hight lights some of them
+
+### Install
+    "pip3 install optional"
+    or Install by cloning the repo and running "sudo python3 setup.py install"
 
 ### See if a value is set, if not set one
     >>> from optional import optional
