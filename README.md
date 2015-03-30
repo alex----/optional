@@ -1,7 +1,7 @@
 # optional
-A mostly transparent python3 optional class
+A mostly transparent python optional class (works with python 2 and 3)
 
-This was an exercise to learn a little more of python3. I have not tested/used this in a project.
+This was a learning exercise. I have not tested/used this in a project.
 
 Run the tests with 'python3 test_optional.py'. 
 
