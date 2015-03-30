@@ -2,6 +2,7 @@
 """
 A mostly transparent optional class implemention
 """
+import sys
 
 
 class _optional(object):
@@ -55,7 +56,7 @@ class _OptionalWrapper(type):
             # Create a new instance of of the type but adding the _optional base class
             new_value_class = type(
                 '%s(%s)' % (cls.__name__, instance_value),
-                (type(instance_value), _optional),
+                (instance_value.__class__, _optional),
                 {})
             try:
                 instance = new_value_class(instance_value)
@@ -76,6 +77,21 @@ class _OptionalWrapper(type):
         return instance
 
 
+PY3_OPTIONAL_DEFINITION = """
 class optional(metaclass=_OptionalWrapper):
-    """ Face on optional meta/class """
+    ''' Face on optional meta/class '''
+"""
+
+
+PY2_OPTIONAL_DEFINITION = """
+class optional(object):
+    ''' Face on optional meta/class '''
+    __metaclass__ = _OptionalWrapper
+"""
+
+
+if sys.version_info >= (3,0):
+    exec(PY3_OPTIONAL_DEFINITION)
+else:
+    exec(PY2_OPTIONAL_DEFINITION)
 
