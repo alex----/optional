@@ -4,6 +4,7 @@ A mostly transparent python optional class (works with python 2 and 3)
 This was a learning exercise. I have not tested/used this in a project.
 
 Run the tests with 'python3 test_optional.py'.
+
 Install by cloning the repo and running "sudo python3 setup.py install"
 
 A couple of implementation details made this harder - 'python3 challenges.py' runs a few tests that hight lights some of them
