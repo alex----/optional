@@ -71,7 +71,6 @@ class _OptionalWrapper(type):
             # Otherwise lets just make an instance of _optional
             new_value_class = type('%s(%s)' % (cls.__name__, 'None'), (_optional,), {})
             instance = new_value_class()
-            instance._value = None
             instance.is_set = False
             instance.default = default
         return instance
